@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }
@@ -97,15 +97,15 @@ class _HomePageState extends State<HomePage> {
           Navigator.pop(context);
           setState(() {
             if(id ==1){
-              currentPage == DrawerSections.dashboard;
+              currentPage = DrawerSections.dashboard;
             }else if(id==2){
-              currentPage == DrawerSections.events;
+              currentPage = DrawerSections.events;
             }else if(id==3){
-              currentPage == DrawerSections.merchandise;
+              currentPage = DrawerSections.merchandise;
             }else if(id==4){
-              currentPage == DrawerSections.contactUs;
+              currentPage = DrawerSections.contactUs;
             }else if(id==5){
-              currentPage == DrawerSections.aboutUs;
+              currentPage = DrawerSections.aboutUs;
             }
           });
         },
