@@ -1,3 +1,5 @@
+import 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
+import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 import 'package:flutter/material.dart';
 import 'Home.dart';
 import 'about.dart';
@@ -48,6 +50,37 @@ class _HomePageState extends State<HomePage> {
       container=about();
     }
     return Scaffold(
+      backgroundColor: Color(0xFFCC8787),
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: Colors.transparent,
+          color: Color(0xFF891B11),
+          animationDuration: Duration(milliseconds: 300),
+          onTap: (index){
+            if (index==0)
+              {
+                print(index);
+                Home();
+              }else if(index==1){
+              print(index);
+            } else if(index==2){
+              print(index);
+              events();
+            };
+          },
+          items: [CurvedNavigationBarItem(
+              child: Icon(Icons.feed,color: Colors.white),
+              label: "Feeds",
+            ),
+            CurvedNavigationBarItem(
+              child: Icon(Icons.favorite,color: Colors.white),
+              label: "Aluminac",
+            ),
+        CurvedNavigationBarItem(
+          child: Icon(Icons.event_repeat_sharp,color: Colors.white),
+          label: "Events",
+            ),
+        ],
+      ),
       appBar: AppBar(
         backgroundColor: Color(0xFF941D11),
         title: Text("#MAROON SQUAD"),
